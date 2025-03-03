@@ -1,0 +1,15 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 28 Feb 2025 17:04:52 at https://html.storebuild.shop/cleanixer-prv/cleanixer/index-3.html#0 +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://html.storebuild.shop/cleanixer-prv/cleanixer/index-3.html#0 -O1 "C:\Users\Novox\Desktop\new-folder-new\web" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:06:36	Error: 	"Not Found" (404) at link https://html.storebuild.shop/cleanixer-prv/cleanixer/assets/css/owl.video.play.png (from https://html.storebuild.shop/cleanixer-prv/cleanixer/assets/css/owl.carousel.min.css)
+17:06:36	Error: 	"Not Found" (404) at link https://html.storebuild.shop/cleanixer-prv/cleanixer/www.facebook.com/example (from https://html.storebuild.shop/cleanixer-prv/cleanixer/contact.html)
+17:06:36	Error: 	"Not Found" (404) at link https://html.storebuild.shop/cleanixer-prv/cleanixer/www.twitter.com/example (from https://html.storebuild.shop/cleanixer-prv/cleanixer/contact.html)
+17:06:36	Error: 	"Not Found" (404) at link https://html.storebuild.shop/cleanixer-prv/cleanixer/www.behance.com/example (from https://html.storebuild.shop/cleanixer-prv/cleanixer/contact.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 44 seconds : 301 links scanned, 296 files written (33394489 bytes overall) [22158874 bytes received at 213066 bytes/sec], 17515948 bytes transferred using HTTP compression in 78 files, ratio 34%, 15.8 requests per connection
+(4 errors, 0 warnings, 0 messages)
