@@ -23,6 +23,17 @@
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "YQVysr8oulz8Ybw3tp",
+            });
+        })();
+        </script>
+
+        <script src="/html.storebuild.shop/cleanixer-prv/cleanixer/assets/js/email.js"></script>
     </head>
 
 
@@ -187,7 +198,7 @@
                         <h3 class="tp-offcanvas-title sm">Follow Us</h3>
                         <ul>
                             <li>
-                            <a href="#">
+                            <a href="https://www.instagram.com/caxroz_gmc/">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M11.25 1.5H4.75C2.95507 1.5 1.5 2.95507 1.5 4.75V11.25C1.5 13.0449 2.95507 14.5 4.75 14.5H11.25C13.0449 14.5 14.5 13.0449 14.5 11.25V4.75C14.5 2.95507 13.0449 1.5 11.25 1.5Z"
@@ -1311,60 +1322,72 @@
                                     or appoinment.</h2>
 
                             </div>
-
-                            <div class="cta-form mt-none-10">
-
+                            <form class="cta-form mt-none-10" onsubmit="sendEmail(event)">
                                 <div class="form-group mt-10">
-
                                     <label for="name"><i class="fal fa-user"></i></label>
-
-                                    <input type="text" id="name" placeholder="Enter your name">
-
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
                                 </div>
-
+                            
                                 <div class="form-group mt-10">
-
                                     <label for="email"><i class="fal fa-envelope"></i></label>
-
-                                    <input type="email" id="email" placeholder="Enter your email">
-
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                                 </div>
-
+                            
                                 <div class="from-group-wrapper mt-10">
-
                                     <div class="form-group">
-
                                         <label for="date"><i class="fal fa-calendar-alt"></i></label>
-
-                                        <input type="date" id="date">
-
+                                        <input type="date" id="date" name="date" required>
                                     </div>
-
+                            
                                     <div class="form-group">
-
-                                        <select name="subject">
-
-                                            <option data-display="Subject">Subject</option>
-
-                                            <option value="1">Services</option>
-
-                                            <option value="2">Cleaning</option>
-
-                                            <option value="3">Cleaning</option>
-
+                                        <select name="subject" id="subject" required>
+                                            <option value="" disabled selected>Select Subject</option>
+                                            <option value="Services">Services</option>
+                                            <option value="Cleaning">Cleaning</option>
+                                            <option value="Hiring">Hiring</option>
                                         </select>
-
                                     </div>
-
                                 </div>
-
+                            
                                 <div class="form-group mt-10">
-
-                                    <button type="submit" class="site-btn boxed">Submit Request</button>
-
+                                    <button type="submit" class="site-btn boxed">Send Email</button>
                                 </div>
-
-                            </div>
+                            </form>
+                            
+                            <!-- Include EmailJS SDK -->
+                            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                            
+                            <script>
+                                (function () {
+                                    emailjs.init("YQVysr8oulz8Ybw3tp"); // Replace with your EmailJS Public Key
+                                })();
+                            
+                                function sendEmail(event) {
+                                    event.preventDefault(); // Prevent form from refreshing the page
+                            
+                                    let params = {
+                                        to_email: document.getElementById("email").value, // Send email to the user who filled out the form
+                                        name: document.getElementById("name").value,
+                                        email: document.getElementById("email").value,
+                                        subject: document.getElementById("subject").value,
+                                        date: document.getElementById("date").value
+                                    };
+                            
+                                    console.log("Sending email with params:", params);
+                            
+                                    emailjs.send("service_4d81wow", "template_ha5borb", params)
+                                        .then(response => {
+                                            alert("Email sent successfully!");
+                                            console.log("SUCCESS:", response);
+                                        })
+                                        .catch(error => {
+                                            alert("Failed to send email. Check console.");
+                                            console.error("FAILED:", error);
+                                        });
+                                }
+                            </script>
+                            
+                            
 
                         </div>
 
