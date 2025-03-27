@@ -502,7 +502,7 @@ label {
 }
 /* Header css 3 */
 .transparent .nav-area.sticky-header {
-	background: #004976;
+	background: #fff;
 }
 .site-header.transparent {
 	position: absolute;
@@ -537,8 +537,10 @@ label {
 	background: #004976;
 }
 .transparent .header-button-list .btn {
-	color: #fff;
-	border-color: rgba(255, 255, 255, 0.1);
+	/* color: #fff; */
+	background: #004976;
+	border-color: #004976;
+	width: 60px;
 }
 
 /* 3. Slider css */
